@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@media only screen and (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .mobile-only {
+        display: none;
+    }
+}

@@ -1,0 +1,5 @@
+<?php
+
+/**
+ * Module -- Game types
+ */
