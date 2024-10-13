@@ -1,5 +1,5 @@
 <footer class="site-footer">
-        <div class="container">
+        <div class="footer-container">
             <div class="footer-widgets">
                 <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
                     <div class="widget-area">
@@ -8,18 +8,20 @@
                 <?php endif; ?>
             </div>
             <div class="footer-info">
-                <p>&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</p>
                 <nav class="footer-navigation">
                     <?php wp_nav_menu( array(
-                        'theme_location' => 'footer',
-                        'container' => 'ul',
-                        'menu_class' => 'footer-menu',
+                        'theme_location' => 'footer-menu',
+                        'container'      => false,
+                        'menu_class'     => 'footer-menu',
+                        'fallback_cb'    => false,
                     ) ); ?>
                 </nav>
             </div>
+            <p class="copyright">&copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.</p>
         </div>
     </footer>
 
     <?php wp_footer(); ?>
+
 </body>
 </html>
