@@ -87,6 +87,59 @@
             "append": ""
         },
         {
+            "key": "field_670d7cfc8c06f",
+            "label": "Payment methods",
+            "name": "payment_methods_1",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 0,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_670d7d098c070",
+                    "label": "image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "uploader": "",
+                    "return_format": "url",
+                    "acfe_thumbnail": 0,
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "parent_repeater": "field_670d7cfc8c06f"
+                }
+            ]
+        },
+        {
             "key": "field_670abb281c6e2",
             "label": "Buttons",
             "name": "buttons_top_1",
@@ -224,6 +277,59 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_670d7d2e8c071",
+            "label": "Payment methods",
+            "name": "payment_methods_2",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 0,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_670d7d2e8c072",
+                    "label": "image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "uploader": "",
+                    "return_format": "url",
+                    "acfe_thumbnail": 0,
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "parent_repeater": "field_670d7d2e8c071"
+                }
+            ]
         },
         {
             "key": "field_670abb661c6e5",
@@ -365,6 +471,59 @@
             "append": ""
         },
         {
+            "key": "field_670d7d348c073",
+            "label": "Payment methods",
+            "name": "payment_methods_3",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "acfe_repeater_stylised_button": 0,
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_670d7d348c074",
+                    "label": "image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "uploader": "",
+                    "return_format": "url",
+                    "acfe_thumbnail": 0,
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "parent_repeater": "field_670d7d348c073"
+                }
+            ]
+        },
+        {
             "key": "field_670abb681c6e8",
             "label": "Buttons",
             "name": "buttons_top_3",
@@ -445,5 +604,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1728757260
+    "modified": 1728938074
 }

@@ -9,13 +9,11 @@ get_header();
 $page_id = get_the_ID();
 $modules = get_field('module_content', $page_id);
 
-
 ?>
 
 <div id="main">
-
     
-    <?php 
+<?php 
 /**
  * generate_modules( array $modules ) lives in "inc/theme_functions.php"
  * 
