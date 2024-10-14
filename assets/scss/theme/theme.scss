@@ -52,63 +52,67 @@ p {
     padding-bottom: 35px;
 }
 
-ul.styled,
-ol.styled {
-    color: #ffffff;
-    padding-left: 30px;
-}
+#main {
 
-ul.styled {
-    list-style: none;
-}
+    ul,
+    ol {
+        color: #ffffff;
+        padding-left: 30px;
+    }
 
-ul.styled li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 10px;
-}
+    ul {
+        list-style: none;
+    }
 
-ul.styled li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 17.5px;
-    height: 17.5px;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #0DB6FF 0%, #02FFED 48%, #FFFFFF 100%);
-}
+    ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
+    }
+
+    ul li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 17.5px;
+        height: 17.5px;
+        border-radius: 50%;
+        background: linear-gradient(180deg, #0DB6FF 0%, #02FFED 48%, #FFFFFF 100%);
+    }
 
 
-ol.styled {
-    list-style: none;
-    counter-reset: list-counter;
-    position: relative;
-}
+    ol {
+        list-style: none;
+        counter-reset: list-counter;
+        position: relative;
+    }
 
-ol.styled li {
-    position: relative;
-    counter-increment: list-counter;
-    margin-bottom: 10px;
-    padding-left: 25px;
-}
+    ol li {
+        position: relative;
+        counter-increment: list-counter;
+        margin-bottom: 10px;
+        padding-left: 25px;
+    }
 
-ol.styled li::before {
-    content: counter(list-counter);
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    font-weight: bold;
-    font-size: 17.5px;
-    background: linear-gradient(180deg, #0DB6FF 0%, #02FFED 48%, #FFFFFF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+    ol li::before {
+        content: counter(list-counter);
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: bold;
+        font-size: 17.5px;
+        background: linear-gradient(180deg, #0DB6FF 0%, #02FFED 48%, #FFFFFF 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-li {
-    color: #ffffff;
+    li {
+        color: #ffffff;
+    }
+
 }
 
 b,
