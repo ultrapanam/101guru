@@ -28,6 +28,7 @@ h1 {
     font-weight: 800;
     background: linear-gradient(90deg, #0DB6FF 0%, #02FFED 49.15%, #FFFFFF 98.29%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -37,6 +38,7 @@ h2 {
     text-align: center;
     background: linear-gradient(90deg, #0DB6FF 0%, #02FFED 49.15%, #FFFFFF 98.29%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
     @media screen and (max-width: 992px) {
@@ -126,6 +128,7 @@ p {
         font-size: 17.5px;
         background: linear-gradient(180deg, #0DB6FF 0%, #02FFED 48%, #FFFFFF 100%);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
