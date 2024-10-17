@@ -1,5 +1,0 @@
-<?php
-
-/**
- * Module -- Payment Types
- */

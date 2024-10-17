@@ -192,3 +192,28 @@ if(function_exists('acf_add_options_page'))
     );
 
 }
+
+//Populate choices with payment methods
+
+// Populate ACF select field with payment method names from Theme Settings options page
+function populate_choices_from_theme_settings( $field ) {
+    // Reset the choices
+    $field['choices'] = array();
+
+    // Check if the repeater field exists on the Theme Settings options page
+    if ( have_rows( 'payment_methods_repeater', 'option' ) ) {
+        while ( have_rows( 'payment_methods_repeater', 'option' ) ) {
+            the_row();
+            
+            // Get the payment method name (this will be shown in the Select field)
+            $payment_method_name = get_sub_field( 'name' );
+
+            // Add the payment method name to the Select field choices
+            $field['choices'][ $payment_method_name ] = $payment_method_name;
+        }
+    }
+
+    return $field;
+}
+
+add_filter( 'acf/load_field/name=payment_methods', 'populate_choices_from_theme_settings' );

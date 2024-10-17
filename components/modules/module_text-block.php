@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Module -- Text Block
+ * Module -- Paragraph Block
  */
 
 if (isset($module)) {
