@@ -6,11 +6,18 @@
                 flex-wrap: wrap;
                 justify-content: space-around;
                 align-items: flex-end;
+                padding-left: 35px;
+                padding-right: 35px;
 
                 @media (max-width: 1203px) {
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-between;
+                }
+
+                @media (max-width: 992px) {
+                    padding-left: 15px;
+                    padding-right: 15px;
                 }
 
                 .single-card {
