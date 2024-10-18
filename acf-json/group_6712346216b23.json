@@ -1,0 +1,92 @@
+{
+    "key": "group_6712346216b23",
+    "title": "[MODULE] Payment Providers",
+    "fields": [
+        {
+            "key": "field_67123462246ea",
+            "label": "Heading",
+            "name": "payment_providers_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_671234622816a",
+            "label": "Payment methods",
+            "name": "payment_providers",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Visa": "Visa",
+                "MasterCard": "MasterCard",
+                "payz.": "payz.",
+                "Paysafe card": "Paysafe card",
+                "Skrill": "Skrill",
+                "NETELLER": "NETELLER",
+                "Payoneer": "Payoneer",
+                "GiroPay": "GiroPay",
+                "Click2Pay": "Click2Pay",
+                "Sofort": "Sofort",
+                "Ideal": "Ideal",
+                "Entropay": "Entropay",
+                "Poli": "Poli",
+                "PayPal": "PayPal"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "multiple": 1,
+            "allow_custom": 0,
+            "placeholder": "",
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "search_placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1729246346
+}
