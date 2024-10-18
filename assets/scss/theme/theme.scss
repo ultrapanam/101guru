@@ -67,10 +67,10 @@ p {
     line-height: 30px;
     text-align: left;
     color: #ffffff;
-    padding-bottom: 35px;
+    padding-bottom: 0px;
 
     @media screen and (max-width: 992px) {
-        padding: 0 15px;
+        padding: 0px;
     }
 }
 
@@ -152,8 +152,12 @@ strong {
     padding: 0 15px;
 }
 
-.block-container {
+.grey-bg {
     background-color: #353535;
+}
+
+.block-container {
+    // background-color: #353535;
     padding-top: 40px;
     padding-bottom: 35px;
     padding-left: 35px;
