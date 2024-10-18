@@ -1,0 +1,60 @@
+$gap-size: 20px;
+$background-color: #f9f9f9;
+$border-color: #ddd;
+$border-radius: 5px;
+$hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$transition-time: 0.3s;
+
+.payment-providers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // Default: 4 items in a row
+    gap: $gap-size;
+    margin: 0 auto;
+    padding: 20px;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(3, 1fr); // 3 items in a row
+    }
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr); // 2 items in a row
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr); // 2 items in a row on medium screens
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr; // 1 item in a row on the smallest screens
+    }
+}
+
+.payment-provider {
+    border-radius: $border-radius;
+    padding-top: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+    transition: transform $transition-time ease, box-shadow $transition-time ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $hover-shadow;
+        border-radius: $border-radius;
+    }
+
+    img {
+        max-width: 100%; // Ensure the image never exceeds the container width
+        height: auto;
+        margin-bottom: 10px;
+        object-fit: contain; // Ensure the image maintains aspect ratio and fits inside the container
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+        text-align: center;
+        padding: 0;
+    }
+}
