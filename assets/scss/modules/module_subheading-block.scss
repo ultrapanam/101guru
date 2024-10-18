@@ -1,0 +1,101 @@
+.subheading-block {
+    padding: 40px 20px; // General section padding
+    width: 100%;
+
+    .block-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid transparent; // Default border, can be customized
+        padding: 20px;
+        border-radius: 5px;
+
+        // Apply custom border and background classes
+        &.grey-bg {
+            background-color: #f5f5f5; // Light grey background
+        }
+
+        &.bordered {
+            border-color: #ddd; // Add border if 'bordered' class exists
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column; // Stack columns on mobile
+        }
+    }
+
+    .inner-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        gap: 20px; // Space between image and text on desktop
+
+        @media (max-width: 768px) {
+            flex-direction: column; // Stack image and text on mobile
+        }
+    }
+
+    .image-container {
+        flex: 1; // Equal width with paragraph-wrapper on desktop
+        padding: 25px;
+        max-width: 547px;
+
+        img {
+            width: 100%; // Ensure image takes up full width of its container
+            border-radius: 5px;
+            object-fit: cover; // Keep aspect ratio
+        }
+
+        @media (max-width: 768px) {
+            margin-bottom: 20px; // Add space below image on mobile
+        }
+    }
+
+    .paragraph-wrapper {
+        flex: 1; // Equal width with image-container on desktop
+
+        .subheading {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            padding-left: 15px;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                left: 15px; // Adjust space between circle and subheading
+                top: 50%;
+                transform: translateY(-50%); // Align the circle vertically with the text
+                width: 16px;
+                height: 16px;
+                background: linear-gradient(180deg, #0DB6FF 0%, #02FFED 48%, #FFFFFF 100%);
+                border-radius: 50%; // Make it a circle
+            }
+
+            h4 {
+                font-size: 20px;
+                margin: 0;
+                padding-left: 25px;
+            }
+        }
+
+        .paragraph {
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+
+    .heading-text {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
