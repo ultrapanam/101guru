@@ -1,0 +1,71 @@
+$gap-size: 55px;
+$icon-size: 20px;
+$icon-color-pros: #4caf50; // Green for pros
+$icon-color-cons: #f44336; // Red for cons
+$border-radius: 10px;
+$background-color: #f9f9f9;
+
+.pros-cons {
+    .block-container {
+
+        padding: 20px;
+    }
+
+    .pros-cons-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // Two equal columns
+        gap: $gap-size; // Max 55px gap between columns
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr; // One column on mobile
+        }
+    }
+
+    .pros,
+    .cons {
+        background-color: $background-color;
+        border-radius: $border-radius;
+        padding: 35px;
+
+        h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        ul.proscons-list {
+            list-style: none !important; // Remove default bullets
+            padding-left: 0 !important;
+            margin: 0 !important; // Ensure no extra margin
+
+            li {
+                position: relative !important;
+                padding-left: $icon-size + 10px !important; // Space for icon
+                margin-bottom: 32px !important;
+                font-size: 16px !important;
+                line-height: 1.5 !important;
+
+                &::before {
+                    content: "+" !important;
+                    position: absolute !important;
+                    left: -10px !important;
+                    top: -20px !important;
+                    width: 20px !important;
+                    height: 20px !important;
+                    border-radius: 0% !important;
+                    background: #ffffff00 !important;
+                    transform: none !important;
+                    color: $icon-color-pros !important;
+                    font-size: 40px !important;
+                }
+            }
+        }
+    }
+
+    // Custom styling for the cons list to have different icon color
+    .cons ul.proscons-list li::before {
+        content: "-" !important;
+        background-color: $icon-color-cons !important; // Red for cons icons
+        background: #ffffff00 !important;
+        color: $icon-color-cons !important;
+    }
+}
