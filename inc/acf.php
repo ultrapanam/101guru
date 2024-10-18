@@ -217,3 +217,27 @@ function populate_choices_from_theme_settings( $field ) {
 }
 
 add_filter( 'acf/load_field/name=payment_methods', 'populate_choices_from_theme_settings' );
+
+
+// Populate ACF select field with payment method names from Theme Settings options page
+function populate_choices_from_theme_settings_game_types( $field ) {
+    // Reset the choices
+    $field['choices'] = array();
+
+    // Check if the repeater field exists on the Theme Settings options page
+    if ( have_rows( 'game_types_repeater', 'option' ) ) {
+        while ( have_rows( 'game_types_repeater', 'option' ) ) {
+            the_row();
+            
+            // Get the payment method name (this will be shown in the Select field)
+            $game_type_name = get_sub_field( 'name' );
+
+            // Add the payment method name to the Select field choices
+            $field['choices'][ $game_type_name ] = $game_type_name;
+        }
+    }
+
+    return $field;
+}
+
+add_filter( 'acf/load_field/name=game_types', 'populate_choices_from_theme_settings_game_types' );

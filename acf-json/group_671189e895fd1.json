@@ -1,0 +1,80 @@
+{
+    "key": "group_671189e895fd1",
+    "title": "[MODULE] Game types",
+    "fields": [
+        {
+            "key": "field_671189e89c81d",
+            "label": "Heading",
+            "name": "game_types_heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_671189e8a028a",
+            "label": "Game types",
+            "name": "game_types",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Game 1": "Game 1",
+                "Game 2": "Game 2"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "multiple": 1,
+            "allow_custom": 0,
+            "placeholder": "",
+            "allow_null": 0,
+            "ui": 1,
+            "ajax": 0,
+            "search_placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1729203338
+}
