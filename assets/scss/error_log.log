@@ -1,3 +1,4 @@
 10/13/24 11:53:56: styles.scss - parse error: failed at `/ font-size: 16px;` C:\Users\admin\Local Sites\101-guru\app\public\wp-content\themes\101guru\assets\scss\theme/theme.scss on line 131, at column 27
 10/13/24 11:54:04: styles.scss - parse error: failed at `/ font-size: 16px;` C:\Users\admin\Local Sites\101-guru\app\public\wp-content\themes\101guru\assets\scss\theme/theme.scss on line 131, at column 27
 10/13/24 9:55:01: styles.scss - unexpected }: failed at `` C:\Users\admin\Local Sites\101-guru\app\public\wp-content\themes\101guru\assets\scss\theme/header.scss on line 311, at column 2
+10/18/24 6:33:10: styles.scss - unclosed block: failed at `` C:\Users\admin\Local Sites\101-guru\app\public\wp-content\themes\101guru\assets\scss\theme/theme.scss on line 226, at column 0

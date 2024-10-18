@@ -12,7 +12,9 @@
 ?>
 <div class="section pros-cons">
     <div class="block-container">
-        <h2><?php echo $pros_cons_heading; ?></h2>
+        <?php if ( $pros_cons_heading ) { ?>
+            <h2><?php echo $pros_cons_heading; ?></h2>
+        <?php } ?>
         <div class="pros-cons-wrapper">
             <div class="pros blue-border">
                 <ul class="proscons-list">
