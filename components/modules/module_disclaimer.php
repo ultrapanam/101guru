@@ -1,5 +1,0 @@
-<?php
-
-/**
- * Module -- Disclaimer Block
- */
