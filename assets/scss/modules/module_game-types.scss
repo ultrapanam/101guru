@@ -1,0 +1,77 @@
+$gap-size: 44px;
+$border-color: #ddd;
+$border-radius: 10px;
+$hover-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+$transition-time: 0.3s;
+
+.game_types {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); // Default: 5 items in a row
+    gap: $gap-size;
+    margin: 0 auto;
+    padding: 20px;
+
+    @media (max-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr); // 4 items in a row
+    }
+
+    @media (max-width: 992px) {
+        grid-template-columns: repeat(3, 1fr); // 3 items in a row
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr); // 2 items in a row
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(2, 1fr); // 2 items in a row on the smallest screens
+    }
+
+    @media (max-width: 320px) {
+        grid-template-columns: 1fr; // 1 item in a row on very small screens
+    }
+}
+
+.game-type {
+    position: relative;
+    border-radius: $border-radius;
+    padding: 0;
+    text-align: center;
+    transition: transform $transition-time ease, box-shadow $transition-time ease;
+    aspect-ratio: 1; // Ensure the item is always square
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $hover-shadow;
+        border-radius: $border-radius;
+    }
+
+    img {
+        max-width: 90%; // Scale down slightly to ensure padding inside the square container
+        max-height: 90%; // Prevent images from exceeding the container height
+        object-fit: contain; // Ensure the image maintains its aspect ratio and fits within the square
+        margin-bottom: 10px;
+
+        @media (max-width: 768px) {
+            max-width: 80%; // Further reduce image size on smaller screens
+            max-height: 80%; // Maintain proportional height
+        }
+
+        @media (max-width: 480px) {
+            max-width: 70%; // Shrink more for the smallest screens
+            max-height: 70%; // Maintain proportional height
+        }
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+}

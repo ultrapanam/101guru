@@ -20,7 +20,6 @@
  * that need to be assigned to the link
  *
  * @return string - Preset link tag with all passed attributes
- * @author OrbisAgency
  */
  
 if (isset($module)) {
