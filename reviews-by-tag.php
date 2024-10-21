@@ -12,6 +12,7 @@ get_header(); ?>
                 <h2>
                     <?php 
                     // Get the tags from the URL as a comma-separated string
+
                     $current_tags_string = get_query_var('tag'); // This gets 'sic-bo' from the URL
 
                     // Convert the comma-separated string into an array of tags, converting dashes to spaces
@@ -19,6 +20,7 @@ get_header(); ?>
 
                     // Display the tags
                     echo '<span>Casinos with -</span> ' . esc_html(implode(', ', array_map('ucfirst', $current_tags)));
+
                     ?>
                 </h2>
             </div>
@@ -26,10 +28,12 @@ get_header(); ?>
             <?php
             // Check if the tags array exists and contains content
             if ( !empty($current_tags) ) {
+
                 // Convert tags back to slugs for the query (replace spaces with dashes)
                 $current_tags_slugs = array_map(function($tag) {
                     return sanitize_title($tag);
                 }, $current_tags);
+
 
                 // Query to get posts from the 'review' custom post type with the current tags
                 $args = array(
