@@ -283,15 +283,36 @@ function assign_tags_from_acf_modules( $post_id ) {
     if ( ! empty( $modules ) && is_array( $modules ) ) {
         $tags = array(); // Initialize an empty array for the tags
 
-        // Loop through the modules to find the payment_methods layout
+        // Loop through the modules to find the relevant layouts
         foreach ( $modules as $module ) {
+            // Add tags from the 'payment_methods' layout
             if ( isset( $module['acf_fc_layout'] ) && $module['acf_fc_layout'] === 'payment_methods' ) {
-                // Check if the payment_methods field exists and is an array
                 if ( isset( $module['payment_methods'] ) && is_array( $module['payment_methods'] ) ) {
-                    // Loop through the payment methods and add them to the tags array
                     foreach ( $module['payment_methods'] as $payment_method ) {
                         if ( ! empty( $payment_method ) ) {
-                            $tags[] = sanitize_text_field( $payment_method ); // Sanitize and collect tag names
+                            $tags[] = sanitize_text_field( $payment_method );
+                        }
+                    }
+                }
+            }
+
+            // Add tags from the 'payment_providers' layout
+            if ( isset( $module['acf_fc_layout'] ) && $module['acf_fc_layout'] === 'payment_providers' ) {
+                if ( isset( $module['payment_providers'] ) && is_array( $module['payment_providers'] ) ) {
+                    foreach ( $module['payment_providers'] as $payment_provider ) {
+                        if ( ! empty( $payment_provider ) ) {
+                            $tags[] = sanitize_text_field( $payment_provider );
+                        }
+                    }
+                }
+            }
+
+            // Add tags from the 'game_types' layout
+            if ( isset( $module['acf_fc_layout'] ) && $module['acf_fc_layout'] === 'game_types' ) {
+                if ( isset( $module['game_types'] ) && is_array( $module['game_types'] ) ) {
+                    foreach ( $module['game_types'] as $game_type ) {
+                        if ( ! empty( $game_type ) ) {
+                            $tags[] = sanitize_text_field( $game_type );
                         }
                     }
                 }
@@ -305,3 +326,4 @@ function assign_tags_from_acf_modules( $post_id ) {
     }
 }
 add_action( 'save_post', 'assign_tags_from_acf_modules' );
+

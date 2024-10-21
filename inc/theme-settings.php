@@ -142,3 +142,23 @@ add_filter('posts_where', 'custom_search_where');
 add_filter('posts_join', 'custom_search_join');
 add_filter('posts_groupby', 'custom_search_groupby');
 
+
+// Custom rewrite rule for Reviews by Tag
+function custom_reviews_by_tag_rewrite() {
+    add_rewrite_rule(
+        '^reviews-by-tag/([^/]*)/?',
+        'index.php?pagename=reviews-by-tag&tag=$matches[1]',
+        'top'
+    );
+}
+add_action( 'init', 'custom_reviews_by_tag_rewrite' );
+
+// Pass the 'tag' query variable to the page template
+function custom_reviews_by_tag_query_vars( $vars ) {
+    $vars[] = 'tag';
+    return $vars;
+}
+add_filter( 'query_vars', 'custom_reviews_by_tag_query_vars' );
+
+
+
