@@ -46,7 +46,7 @@ $rating = get_field('review_rating') != null ? get_field('review_rating') : fals
                                                 </li>
                                             <?php } ?>
                                             <?php if( $review_bonus_text ): ?>
-                                                <li class="summary-list-heading green-bg">
+                                                <li class="summary-list-heading blue-bg" style="padding: 0 !important; padding-left: 25px !important;">
                                                     <p><?php echo esc_html( $review_bonus_text ); ?></p>
                                                 </li>
                                             <?php endif; ?>
