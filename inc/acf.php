@@ -264,3 +264,44 @@ function populate_choices_from_theme_settings_payment_providers_repeater( $field
 }
 
 add_filter( 'acf/load_field/name=payment_providers', 'populate_choices_from_theme_settings_payment_providers_repeater' );
+
+function assign_tags_from_acf_modules( $post_id ) {
+    // Ensure this is not an autosave and that we're in the right context
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+
+    // Ensure this function only runs for the 'review' custom post type
+    if ( 'review' !== get_post_type( $post_id ) ) {
+        return;
+    }
+
+    // Get the ACF field containing the modules array
+    $modules = get_field( 'module_content', $post_id );
+
+    // Check if the modules array exists and contains content
+    if ( ! empty( $modules ) && is_array( $modules ) ) {
+        $tags = array(); // Initialize an empty array for the tags
+
+        // Loop through the modules to find the payment_methods layout
+        foreach ( $modules as $module ) {
+            if ( isset( $module['acf_fc_layout'] ) && $module['acf_fc_layout'] === 'payment_methods' ) {
+                // Check if the payment_methods field exists and is an array
+                if ( isset( $module['payment_methods'] ) && is_array( $module['payment_methods'] ) ) {
+                    // Loop through the payment methods and add them to the tags array
+                    foreach ( $module['payment_methods'] as $payment_method ) {
+                        if ( ! empty( $payment_method ) ) {
+                            $tags[] = sanitize_text_field( $payment_method ); // Sanitize and collect tag names
+                        }
+                    }
+                }
+            }
+        }
+
+        // Assign the collected tags to the post
+        if ( ! empty( $tags ) ) {
+            wp_set_post_tags( $post_id, $tags, false ); // Set tags for the post, replacing existing tags
+        }
+    }
+}
+add_action( 'save_post', 'assign_tags_from_acf_modules' );
