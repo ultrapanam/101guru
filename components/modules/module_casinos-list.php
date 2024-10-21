@@ -124,10 +124,10 @@ $order = (isset($module['order'])) ? $module['order'] : false;
 
                                 <div class="buttons-container">
                                     <a href="<?php the_permalink(); ?>" class="btn trans-btn"><?php echo __('Read Review', '101guru' ); ?></a>
-                                        <?php if( $review_affilate_link ): ?>
-                                            <?php echo generate_acf_link($review_affilate_link, 'btn green-btn btn-left'); ?>
-                                        <?php endif; ?>
-                                    </div>
+                                    <?php if( $review_affilate_link ): ?>
+                                        <?php echo generate_acf_link($review_affilate_link, 'btn green-btn btn-left'); ?>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                     </div>

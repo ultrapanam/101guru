@@ -1,17 +1,23 @@
 // Theme settings
-@import "theme/theme.scss";
+@import "theme/theme";
 
 // Header styles
-@import "theme/header.scss";
+@import "theme/header";
 
 // Footer styles
-@import "theme/footer.scss";
+@import "theme/footer";
 
 // Utility
-@import "theme/utility.scss";
+@import "theme/utility";
 
 // Reset
-@import "theme/reset.scss";
+@import "theme/reset";
+
+// Search
+@import "theme/search";
+
+// Single review
+@import "theme/single-review";
 
 // Top 3 casinos
 @import "modules/module_top-3-block";
