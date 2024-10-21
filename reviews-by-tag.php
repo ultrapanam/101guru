@@ -12,13 +12,13 @@ get_header(); ?>
                 <h2>
                     <?php 
                     // Get the tags from the URL as a comma-separated string
-                    $current_tags_string = get_query_var('tag'); // This gets 'poker,paypal' from the URL
+                    $current_tags_string = get_query_var('tag'); // This gets 'sic-bo' from the URL
 
-                    // Convert the comma-separated string into an array of tags
-                    $current_tags = explode(',', $current_tags_string);
+                    // Convert the comma-separated string into an array of tags, converting dashes to spaces
+                    $current_tags = explode(',', str_replace('-', ' ', $current_tags_string));
 
                     // Display the tags
-                    echo 'Reviews Tagged: ' . esc_html( implode(', ', array_map('ucfirst', $current_tags)) );
+                    echo '<span>Casinos with -</span> ' . esc_html(implode(', ', array_map('ucfirst', $current_tags)));
                     ?>
                 </h2>
             </div>
@@ -26,6 +26,11 @@ get_header(); ?>
             <?php
             // Check if the tags array exists and contains content
             if ( !empty($current_tags) ) {
+                // Convert tags back to slugs for the query (replace spaces with dashes)
+                $current_tags_slugs = array_map(function($tag) {
+                    return sanitize_title($tag);
+                }, $current_tags);
+
                 // Query to get posts from the 'review' custom post type with the current tags
                 $args = array(
                     'post_type' => 'review',
@@ -33,8 +38,8 @@ get_header(); ?>
                     'tax_query'      => array(
                         array(
                             'taxonomy' => 'post_tag',
-                            'field'    => 'name',
-                            'terms'    => $current_tags, // Match multiple tags
+                            'field'    => 'slug',
+                            'terms'    => $current_tags_slugs, // Match multiple tags as slugs
                             'operator' => 'AND', // Ensure the reviews have all the specified tags
                         ),
                     ),
