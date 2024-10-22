@@ -161,4 +161,11 @@ function custom_reviews_by_tag_query_vars( $vars ) {
 add_filter( 'query_vars', 'custom_reviews_by_tag_query_vars' );
 
 
+// Include the module_bottom-bar.php template
+
+function add_bottom_bar_template() {
+    get_template_part('/components/modules/module_bottom-bar');
+}
+add_action('wp_footer', 'add_bottom_bar_template');
+
 
