@@ -87,6 +87,26 @@
             "append": ""
         },
         {
+            "key": "field_67182700f11ed",
+            "label": "Games",
+            "name": "games_top_1",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_670d7cfc8c06f",
             "label": "Payment methods",
             "name": "payment_methods_1",
@@ -262,6 +282,26 @@
             "key": "field_670aba931c6dc",
             "label": "Min. deposit",
             "name": "min_deposit_top_2",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6718270cf11ee",
+            "label": "Games",
+            "name": "games_top_2",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -471,6 +511,26 @@
             "append": ""
         },
         {
+            "key": "field_6718270ef11ef",
+            "label": "Games",
+            "name": "games_top_3",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_670d7d348c073",
             "label": "Payment methods",
             "name": "payment_methods_3",
@@ -604,5 +664,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1728938074
+    "modified": 1729636131
 }

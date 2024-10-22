@@ -26,18 +26,21 @@ if (isset($module)) {
     $casino_logo_top_1 = (isset($module['casino_logo_top_1'])) ? $module['casino_logo_top_1'] : false;
     $bonus_text_top_1 = (isset($module['bonus_text_top_1'])) ? $module['bonus_text_top_1'] : false;
     $min_deposit_top_1 = (isset($module['min_deposit_top_1'])) ? $module['min_deposit_top_1'] : false;
+    $games_top_1 = (isset($module['games_top_1'])) ? $module['games_top_1'] : false;
     $payment_methods_1 = (isset($module['payment_methods_1'])) ? $module['payment_methods_1'] : false;
     $buttons_top_1 = (isset($module['buttons_top_1'])) ? $module['buttons_top_1'] : false;
 
     $casino_logo_top_2 = (isset($module['casino_logo_top_2'])) ? $module['casino_logo_top_2'] : false;
     $bonus_text_top_2 = (isset($module['bonus_text_top_2'])) ? $module['bonus_text_top_2'] : false;
     $min_deposit_top_2 = (isset($module['min_deposit_top_2'])) ? $module['min_deposit_top_2'] : false;
+    $games_top_2 = (isset($module['games_top_2'])) ? $module['games_top_2'] : false;
     $payment_methods_2 = (isset($module['payment_methods_2'])) ? $module['payment_methods_2'] : false;
     $buttons_top_2 = (isset($module['buttons_top_2'])) ? $module['buttons_top_2'] : false;
 
     $casino_logo_top_3 = (isset($module['casino_logo_top_3'])) ? $module['casino_logo_top_3'] : false;
     $bonus_text_top_3 = (isset($module['bonus_text_top_3'])) ? $module['bonus_text_top_3'] : false;
     $min_deposit_top_3 = (isset($module['min_deposit_top_3'])) ? $module['min_deposit_top_3'] : false;
+    $games_top_3 = (isset($module['games_top_3'])) ? $module['games_top_3'] : false;
     $payment_methods_3 = (isset($module['payment_methods_3'])) ? $module['payment_methods_3'] : false;
     $buttons_top_3 = (isset($module['buttons_top_3'])) ? $module['buttons_top_3'] : false;
 ?>
@@ -60,13 +63,13 @@ if (isset($module)) {
                         <div class="min-deposit">
                                 <span class="min-deposit-label">Min deposit</span>
                                 <span class="min-deposit-body">
-                                    <?php echo $min_deposit_top_2; ?>
+                                    <?php echo $min_deposit_top_1; ?>
                                 </span>
                             </div>
                             <div class="slots">
                                 <span class="slots-label">Slots</span>
                                 <span class="slots-counter">
-                                    300
+                                    <?php echo $games_top_1; ?>
                                 </span>
                             </div>
                         </div>
@@ -100,19 +103,19 @@ if (isset($module)) {
                         <div class="min-deposit">
                                 <span class="min-deposit-label">Min deposit</span>
                                 <span class="min-deposit-body">
-                                    <?php echo $min_deposit_top_1; ?>
+                                    <?php echo $min_deposit_top_2; ?>
                                 </span>
                             </div>
                             <div class="slots">
                                 <span class="slots-label">Slots</span>
                                 <span class="slots-counter">
-                                    300
+                                    <?php echo $games_top_2; ?>
                                 </span>
                             </div>
                         </div>
                     </div>
                     <div class="payment-methods">
-                        <?php foreach ( $payment_methods_1 as $payment_logo) { ?>
+                        <?php foreach ( $payment_methods_2 as $payment_logo) { ?>
                             <div class="single-method">
                                 <img src="<?php echo  $payment_logo['image']; ?>" alt="">
                             </div>
@@ -146,13 +149,13 @@ if (isset($module)) {
                             <div class="slots">
                                 <span class="slots-label">Slots</span>
                                 <span class="slots-counter">
-                                    300
+                                    <?php echo $games_top_3; ?>
                                 </span>
                             </div>
                         </div>
                     </div>
                     <div class="payment-methods">
-                        <?php foreach ( $payment_methods_1 as $payment_logo) { ?>
+                        <?php foreach ( $payment_methods_3 as $payment_logo) { ?>
                             <div class="single-method">
                                 <img src="<?php echo  $payment_logo['image']; ?>" alt="">
                             </div>
