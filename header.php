@@ -33,7 +33,7 @@
             <!-- Add the search form here -->
             <div class="header-search">
                 <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-                    <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Search..." autocomplete="off">
+                    <input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="Start typing..." autocomplete="off">
                     <button type="submit" id="searchsubmit">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/icons/search.svg" alt="Search Icon" class="search-icon">
                     </button>

@@ -125,6 +125,22 @@ header.site-header {
                             color: #ffffff;
                         }
                     }
+
+                    #searchSubmitAjaxContainer {
+                        background-color: #0DB6FF;
+                        color: #000000;
+                        cursor: pointer;
+
+                        #searchSubmitAjax {
+                            font-weight: 600;
+                            font-family: "Inter", sans-serif;
+                            background-color: #0DB6FF;
+                            border: none;
+                            font-size: 16px;
+                            cursor: pointer;
+                            padding: 0;
+                        }
+                    }
                 }
             }
 

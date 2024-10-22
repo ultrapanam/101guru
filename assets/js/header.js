@@ -110,7 +110,34 @@ document.addEventListener('DOMContentLoaded', function () {
                                 searchResultsContainer.innerHTML = '<ul><li style="color: white;">No results found</li></ul>';
                             } else {
                                 searchResultsContainer.innerHTML = results;
+
+                                // Get the 'See all results...' button from the AJAX search results
+                                const seeAllResultsButton = document.getElementById('searchSubmitAjax');
+
+                                // Get the search form
+                                const searchForm = document.getElementById('searchform');
+
+                                // Get the search input field
+                                const searchInput = document.querySelector('#s');
+
+                                // Add a click event listener to the button
+                                if (seeAllResultsButton) {
+                                    seeAllResultsButton.addEventListener('click', function (event) {
+                                        event.preventDefault(); // Prevent the default button action
+                                        // Set the search input value to the current input value
+                                        const searchQuery = searchInput.value;
+                                        console.log('test!');
+
+                                        // Check if there's a search query, then submit the form
+                                        if (searchQuery.trim() !== '') {
+                                            searchForm.submit(); // Trigger form submission
+                                        } else {
+                                            alert('Please enter a search term.');
+                                        }
+                                    });
+                                }
                             }
+
                         })
                         .catch(error => {
                             console.error('Error:', error);
@@ -123,6 +150,46 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Clear results if input is less than 3 characters and hide the spinner
                 searchResultsContainer.innerHTML = '';
                 loadingSpinner.style.display = 'none';
+            }
+        });
+    }
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Get the search form and input field
+    const searchForm = document.querySelector('#searchform');
+    const searchInput = document.querySelector('#s');
+    const searchButton = document.querySelector('#searchsubmit');
+
+    // Disable the button initially if the input is empty or less than 3 characters
+    function toggleButtonState() {
+        const queryLength = searchInput.value.trim().length;
+        if (queryLength < 3) {
+            searchButton.disabled = true; // Disable the button
+            searchButton.style.opacity = '0.5'; // Optionally style to show it's inactive
+        } else {
+            searchButton.disabled = false; // Enable the button
+            searchButton.style.opacity = '1'; // Restore opacity
+        }
+    }
+
+    // Run the check on page load and on input change
+    toggleButtonState(); // Initial check on page load
+    searchInput.addEventListener('input', toggleButtonState); // Check on input change
+
+    // Handle the 'See all results...' button in the AJAX search results
+    const seeAllResultsButton = document.querySelector('#ajax-search-results button#searchsubmit');
+    if (seeAllResultsButton) {
+        seeAllResultsButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default button action
+            const searchQuery = searchInput.value.trim();
+
+            // Only submit the form if the search input has 3 or more characters
+            if (searchQuery.length >= 3) {
+                searchForm.submit();
+            } else {
+                alert('Please enter at least 3 characters.');
             }
         });
     }

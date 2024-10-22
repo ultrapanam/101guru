@@ -53,18 +53,30 @@ $order = (isset($module['order'])) ? $module['order'] : false;
                         <!-- Display the Featured Image -->
                         <?php if ( has_post_thumbnail() ): ?>
                             <div class="review-featured-image">
-                                <a href="<?php echo $review_affilate_link['url']; ?>">
-                                    <?php the_post_thumbnail( 'large' ); ?>
-                                </a>
+                                <?php if ($review_affilate_link) { ?>
+                                    <a href="<?php echo $review_affilate_link['url']; ?>">
+                                        <?php the_post_thumbnail( 'large' ); ?>
+                                    </a>
+                                <?php } else { ?>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_post_thumbnail( 'large' ); ?>
+                                    </a>
+                                <?php } ?>
                             </div>
                         <?php endif; ?>
                         <div class="card-body">
                             <div class="first-block">
                                 <?php if ( has_post_thumbnail() ): ?>
                                     <div class="mobile-review-featured-image">
-                                        <a href="<?php echo $review_affilate_link['url']; ?>">
-                                            <?php the_post_thumbnail( 'small' ); ?>
-                                        </a>
+                                        <?php if ($review_affilate_link) { ?>
+                                            <a href="<?php echo $review_affilate_link['url']; ?>">
+                                                <?php the_post_thumbnail( 'small' ); ?>
+                                            </a>
+                                        <?php } else { ?>
+                                            <a href="<?php the_permalink(); ?>">
+                                                <?php the_post_thumbnail( 'small' ); ?>
+                                            </a>
+                                        <?php } ?>
                                     </div>
                                 <?php endif; ?>
                                 <div class="title-wrapper">

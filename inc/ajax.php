@@ -72,6 +72,7 @@ function ajax_live_search() {
                     $final_query->the_post();
                     echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
                 }
+                echo '<li id="searchSubmitAjaxContainer"><button type="submit" id="searchSubmitAjax">See all results...</button></li>';                
                 echo '</ul>';
             }
         } else {

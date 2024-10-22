@@ -1,7 +1,7 @@
 .reviews-by-tag {
     .heading-text {
         margin-bottom: 25px;
-      
+
         h2 {
             span {
                 color: #fff;
@@ -77,19 +77,19 @@
                         font-size: 32px;
                         text-align: left;
                         margin-top: 0px;
-                      
+
                     }
 
                     @media screen and (max-width: 992px) {
                         text-align: center;
                     }
 
-                    a {}
+                    // a {}
                 }
 
-                .paragraph {
-                    p {}
-                }
+                // .paragraph {
+                //     p {}
+                // }
 
                 .additional-fields {
                     display: flex;

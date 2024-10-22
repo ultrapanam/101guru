@@ -1,6 +1,7 @@
 footer.site-footer {
     background-color: #353535;
     position: relative;
+    margin: 0 auto;
 
     &::before {
         content: '';
@@ -18,19 +19,68 @@ footer.site-footer {
         padding-bottom: 35px;
         padding-left: 35px;
         padding-right: 35px;
+        max-width: 1440px;
+        margin: 0 auto;
 
-        .footer-widgets {
-            .widget-area {}
+        .footer-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .single-image {
+                flex: 1 1 auto;
+                max-height: 45px;
+                margin: 10px;
+                text-align: center;
+
+                img {
+                    max-height: 45px;
+                    width: auto;
+                    height: auto;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+
+            @media (max-width: 991px) {
+                .single-image {
+                    flex-basis: calc(50% - 20px); // Two images per row with some spacing
+                }
+            }
+
+            @media (max-width: 768px) {
+                .single-image {
+                    flex-basis: calc(50% - 20px); // Keep two images per row
+                }
+            }
+
+            @media (max-width: 425px) {
+                .single-image {
+                    flex-basis: calc(50% - 10px); // Adjust for smaller screens
+                }
+            }
         }
+
+
+        // .footer-widgets {
+        //     .widget-area {}
+        // }
 
         .copyright {
             padding: 0;
+            margin: 0 auto;
+            max-width: 1440px;
+            text-align: center;
         }
 
         .footer-info {
+            margin: 0 auto;
+            max-width: 1440px;
+
             .footer-navigation {
                 ul {
                     display: flex;
+                    justify-content: center;
 
                     li {
                         padding: 5px 10px;
@@ -57,3 +107,7 @@ footer.site-footer {
         }
     }
 }
+
+// * {
+//     outline: 1px solid red;
+// }

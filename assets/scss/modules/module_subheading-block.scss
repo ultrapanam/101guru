@@ -1,6 +1,9 @@
 .subheading-block {
     padding: 40px 20px; // General section padding
-    width: 100%;
+
+    @media (max-width: 768px) {
+        padding: 0;
+    }
 
     .block-container {
         display: flex;
@@ -22,6 +25,7 @@
 
         @media (max-width: 768px) {
             flex-direction: column; // Stack columns on mobile
+            padding: 0;
         }
     }
 
@@ -45,6 +49,10 @@
             width: 100%; // Ensure image takes up full width of its container
             border-radius: 5px;
             object-fit: cover; // Keep aspect ratio
+
+            @media (max-width: 768px) {
+                object-fit: contain;
+            }
         }
 
         @media (max-width: 768px) {

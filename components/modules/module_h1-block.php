@@ -10,7 +10,7 @@ if (isset($module)) {
     $greybg = (isset($module['greybg']) && $module['greybg'] == 1 ) ? 'grey-bg' : '';
 ?>
 
-<div class="section">
+<div class="section h1-block">
     <div class="block-container <?php echo $border; ?> <?php echo $greybg; ?>">
         <?php if ( $heading ) { ?>
             <div class="heading-text">

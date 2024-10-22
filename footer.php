@@ -1,5 +1,21 @@
+<?php
+
+$footer_images = get_field('footer_images', 'options') != null ? get_field('footer_images', 'options')  : false;
+
+//print_r($footer_images);
+
+?>
 <footer class="site-footer">
         <div class="footer-container">
+            <div class="footer-images">
+                <?php foreach ($footer_images as $image ) { ?>
+                    <?php foreach ($image as $single_image ) { ?>
+                        <div class="single-image">
+                            <?php echo generate_acf_image($single_image , true); ?>                        
+                        </div>
+                    <?php } ?>
+                <?php } ?>
+            </div>
             <div class="footer-widgets">
                 <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
                     <div class="widget-area">

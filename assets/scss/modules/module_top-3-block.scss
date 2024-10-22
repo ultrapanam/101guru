@@ -54,6 +54,11 @@
                         margin-right: 25px;
                         margin-bottom: 23px;
 
+                        @media screen and (max-width: 762px) {
+                            margin-left: 15px;
+                            margin-right: 15px;
+                        }
+
 
                         .bonus-block {
                             text-align: center;
@@ -81,6 +86,7 @@
 
                                     .min-deposit-body {
                                         background: linear-gradient(90deg, #0DB6FF 0%, #02FFED 49.15%, #FFFFFF 98.29%);
+                                        background-clip: text;
                                         -webkit-background-clip: text;
                                         -webkit-text-fill-color: transparent;
                                     }
@@ -104,6 +110,7 @@
 
                                     .slots-counter {
                                         background: linear-gradient(90deg, #0DB6FF 0%, #02FFED 49.15%, #FFFFFF 98.29%);
+                                        background-clip: text;
                                         -webkit-background-clip: text;
                                         -webkit-text-fill-color: transparent;
                                     }
@@ -139,6 +146,7 @@
 
                             h3 {
                                 background: linear-gradient(90deg, #0DB6FF 0%, #02FFED 49.15%, #FFFFFF 98.29%);
+                                background-clip: text;
                                 -webkit-background-clip: text;
                                 -webkit-text-fill-color: transparent;
                                 font-size: 23px;

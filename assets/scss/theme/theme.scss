@@ -74,6 +74,11 @@ p {
     }
 }
 
+.paragraph p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 #main {
 
     ul,
@@ -175,8 +180,8 @@ strong {
     margin-bottom: 80px;
 
     @media screen and (max-width: 992px) {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
 }
 
