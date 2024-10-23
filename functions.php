@@ -26,11 +26,15 @@ require_once('inc/optimization.php');
 require_once('inc/ajax.php');
 
 /**
- * Including Header JavaScript
+ * Including Header JavaScript and Accordion JavaScript
  */
 function enqueue_theme_scripts() {
-    wp_enqueue_script( 'theme-main-js', get_template_directory_uri() . '/assets/js/header.js', array(), '1.0', true );
-  }
+  // Enqueue the header script
+  wp_enqueue_script( 'theme-header-js', get_template_directory_uri() . '/assets/js/header.js', array(), '1.0', true );
+  
+  // Enqueue the accordion script
+  wp_enqueue_script( 'theme-accordion-js', get_template_directory_uri() . '/assets/js/module_accordion.js', array(), '1.0', true );
+}
 add_action( 'wp_enqueue_scripts', 'enqueue_theme_scripts' );
 
   

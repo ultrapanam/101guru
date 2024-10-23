@@ -23,7 +23,7 @@ $bottom_bar_button_link = get_field('bottom_bar_button_link', 'options') != null
 </div>
 <style>
     .site-footer {
-        margin-bottom: 25px;
+        margin-bottom: 25px!important;
     }
 </style>
 <?php } ?>

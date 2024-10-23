@@ -1,0 +1,75 @@
+.custom-accordion {
+    max-width: 1440px;
+
+    .accordion-item {
+        background: linear-gradient(90deg, #28d759 0%, #02FFED 100%) border-box;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        background-color: #353535;
+
+        .accordion-header {
+            margin: 0;
+            padding: 0;
+
+            .accordion-button {
+                width: 100%;
+                padding: 15px;
+                text-align: left;
+                border: none;
+                cursor: pointer;
+                font-size: 18px;
+                font-weight: bold;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: background-color 0.3s ease;
+                -webkit-text-fill-color: #000;
+
+                background: linear-gradient(90deg, #28d759 0%, #02FFED 100%) border-box;
+                color: #fff;
+                border: 4px solid transparent;
+                border-radius: 8px;
+
+                &:hover {
+                    background-color: #005177;
+                }
+
+                &::after {
+                    content: '+';
+                    font-size: 20px;
+                    transition: transform 0.3s ease;
+                }
+
+                &.active::after {
+                    content: '-';
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .accordion-content-faq {
+            max-height: 0;
+            overflow: hidden;
+
+            transition: max-height 0.3s ease, padding 0.3s ease;
+
+            .accordion-body-faq {
+                padding: 25px;
+                background-color: #353535;
+                font-size: 16px;
+                line-height: 1.5;
+                color: #fff;
+            }
+        }
+
+        &.active .accordion-content-faq {
+            max-height: 200px;
+            /* Adjust this depending on the content length */
+            padding: 15px 0;
+        }
+    }
+}
+
+.custom-accordion .accordion-item.active .accordion-content-faq {
+    padding: 3px !important;
+}
