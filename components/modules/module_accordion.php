@@ -9,6 +9,8 @@ if (isset($module)) {
     $open_first = (isset($module['open_first_tab_by_default'])) ? $module['open_first_tab_by_default'] : false;
     $background_type = (isset($module['gradient_background'])) ? $module['gradient_background'] : false;
     $open_first_tab_by_default = (isset($module['open_first_tab_by_default'])) ? $module['open_first_tab_by_default'] : false;
+
+    $i = 0;
 ?>
     <div class="custom-accordion">
         <?php foreach ($accordion as $accordion_item ) { ?>

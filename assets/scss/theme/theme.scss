@@ -83,65 +83,149 @@ p {
 
     ul,
     ol {
-        color: #ffffff;
         padding-left: 30px;
+        /* Base padding for top-level lists */
+        margin-top: 15px;
+        margin-bottom: 15px;
+
+        /* Direct child elements only */
+        >li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+
+            /* Align marker with first line of text */
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+
+            /* Ensure markers for unordered and ordered lists */
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 0.6em;
+                /* Align marker with the text */
+                transform: translateY(-50%);
+            }
+        }
     }
 
+    /* Unordered List Styling */
     ul {
         list-style: none;
+        /* Remove default bullets */
+
+        >li::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #0DB6FF 0%, #02FFED 48%, #28D759 100%);
+        }
     }
 
-    ul li {
-        position: relative;
-        padding-left: 25px;
-        margin-bottom: 10px;
-    }
-
-    ul li::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 17.5px;
-        height: 17.5px;
-        border-radius: 50%;
-        background: linear-gradient(180deg, #0DB6FF 0%, #02FFED 48%, #28D759 100%);
-    }
-
-
+    /* Ordered List Styling */
     ol {
-        list-style: none;
         counter-reset: list-counter;
-        position: relative;
+        /* Start custom numbering from 1 */
+
+        >li {
+            counter-increment: list-counter;
+            /* Increment custom counter */
+
+            &::before {
+                content: counter(list-counter) ".";
+                /* Custom numbering with a period */
+                font-weight: bold;
+                font-size: 17.5px;
+                background: linear-gradient(180deg, #0DB6FF 0%, #02FFED 48%, #28D759 100%);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
     }
 
-    ol li {
-        position: relative;
-        counter-increment: list-counter;
-        margin-bottom: 10px;
-        padding-left: 25px;
-    }
-
-    ol li::before {
-        content: counter(list-counter);
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        font-weight: bold;
-        font-size: 17.5px;
-        background: linear-gradient(180deg, #0DB6FF 0%, #02FFED 48%, #28D759 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
+    /* General Text Color */
     li {
         color: #ffffff;
     }
 
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #353535;
+        border: 1px solid #ddd;
+        margin-bottom: 15px;
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            font-size: 16px;
+            color: #333;
+        }
+
+        th {
+            background: linear-gradient(90deg, #0DB6FF 0%, #02FFED 48%, #28D759 100%);
+            color: #000;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        td {
+            background-color: #353535;
+            color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e9f5ff;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Table Borders */
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+
+            th,
+            td {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+
+
+        /* Styling for smaller screens */
+        @media (max-width: 480px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+
+            th,
+            td {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
+    }
+
 }
+
+
+
 
 b,
 strong {
