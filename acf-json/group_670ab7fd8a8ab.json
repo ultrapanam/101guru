@@ -47,6 +47,26 @@
             "library": "all"
         },
         {
+            "key": "field_671ab03875d4b",
+            "label": "Casino name",
+            "name": "casino_name_top_1",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_670aba5e1c6d8",
             "label": "Bonus text",
             "name": "bonus_text_top_1",
@@ -257,6 +277,26 @@
             "mime_types": "",
             "preview_size": "medium",
             "library": "all"
+        },
+        {
+            "key": "field_671ab05c75d4c",
+            "label": "Casino name",
+            "name": "casino_name_top_2",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_670aba701c6d9",
@@ -471,6 +511,26 @@
             "library": "all"
         },
         {
+            "key": "field_671ab05e75d4d",
+            "label": "Casino name",
+            "name": "casino_name_top_3",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_670aba741c6da",
             "label": "Bonus text",
             "name": "bonus_text_top_3",
@@ -664,5 +724,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1729636131
+    "modified": 1729802352
 }

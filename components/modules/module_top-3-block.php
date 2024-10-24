@@ -24,6 +24,7 @@
  
 if (isset($module)) {
     $casino_logo_top_1 = (isset($module['casino_logo_top_1'])) ? $module['casino_logo_top_1'] : false;
+    $casino_name_top_1 = (isset($module['casino_name_top_1'])) ? $module['casino_name_top_1'] : false;
     $bonus_text_top_1 = (isset($module['bonus_text_top_1'])) ? $module['bonus_text_top_1'] : false;
     $min_deposit_top_1 = (isset($module['min_deposit_top_1'])) ? $module['min_deposit_top_1'] : false;
     $games_top_1 = (isset($module['games_top_1'])) ? $module['games_top_1'] : false;
@@ -31,6 +32,7 @@ if (isset($module)) {
     $buttons_top_1 = (isset($module['buttons_top_1'])) ? $module['buttons_top_1'] : false;
 
     $casino_logo_top_2 = (isset($module['casino_logo_top_2'])) ? $module['casino_logo_top_2'] : false;
+    $casino_name_top_2 = (isset($module['casino_name_top_2'])) ? $module['casino_name_top_2'] : false;
     $bonus_text_top_2 = (isset($module['bonus_text_top_2'])) ? $module['bonus_text_top_2'] : false;
     $min_deposit_top_2 = (isset($module['min_deposit_top_2'])) ? $module['min_deposit_top_2'] : false;
     $games_top_2 = (isset($module['games_top_2'])) ? $module['games_top_2'] : false;
@@ -38,6 +40,7 @@ if (isset($module)) {
     $buttons_top_2 = (isset($module['buttons_top_2'])) ? $module['buttons_top_2'] : false;
 
     $casino_logo_top_3 = (isset($module['casino_logo_top_3'])) ? $module['casino_logo_top_3'] : false;
+    $casino_name_top_3 = (isset($module['casino_name_top_3'])) ? $module['casino_name_top_3'] : false;
     $bonus_text_top_3 = (isset($module['bonus_text_top_3'])) ? $module['bonus_text_top_3'] : false;
     $min_deposit_top_3 = (isset($module['min_deposit_top_3'])) ? $module['min_deposit_top_3'] : false;
     $games_top_3 = (isset($module['games_top_3'])) ? $module['games_top_3'] : false;
@@ -47,7 +50,8 @@ if (isset($module)) {
 <div class="section top-3-block">    
     <div class="block-container">
         <div class="rank-cards-wrapper">
-        <div class="single-card rank-1-item blue-border">
+            <div class="single-card rank-1-item blue-border">
+                <h2 style="display: none!important;"><?php echo $casino_name_top_1; ?></h2>
                 <div class="casino-logo">
                     <?php echo generate_acf_image($casino_logo_top_1, true); ?>
                 </div>
@@ -88,6 +92,7 @@ if (isset($module)) {
                 </div>
             </div>
             <div class="single-card rank-2-item blue-border">
+                <h2 style="display: none!important;"><?php echo $casino_name_top_2; ?></h2>
                 <div class="casino-logo">
                     <?php echo generate_acf_image($casino_logo_top_2, true); ?>
                 </div>
@@ -128,6 +133,7 @@ if (isset($module)) {
                 </div>
             </div>
             <div class="single-card rank-3-item blue-border">
+                <h2 style="display: none!important;"><?php echo $casino_name_top_3; ?></h2>
                 <div class="casino-logo">
                     <?php echo generate_acf_image($casino_logo_top_3, true); ?>
                 </div>
