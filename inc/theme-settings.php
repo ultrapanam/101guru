@@ -169,3 +169,23 @@ function add_bottom_bar_template() {
 add_action('wp_footer', 'add_bottom_bar_template');
 
 
+// Define default tab blink message and set the ACF to edit it
+
+function enqueue_blinking_title_script() {
+    // Get the ACF field value (assuming it's in an options page, but adjust based on where your field is located)
+    $blink_message = get_field('tab_blink_message', 'option'); // 'option' for global fields, adjust as necessary
+
+    // Fallback in case the ACF field is empty
+    if (!$blink_message) {
+        $blink_message = "Don't forget us!";
+    }
+
+    // Output the blink message dynamically in a script tag
+    ?>
+    <script type="text/javascript">
+        const acfBlinkMessage = "<?php echo esc_js($blink_message); ?>";
+    </script>
+    <?php
+}
+add_action('wp_footer', 'enqueue_blinking_title_script');
+

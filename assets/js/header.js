@@ -390,3 +390,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+
+// Add blinking message to the tab when user hides the tab and navigates to another
+const originalTitle = document.title;
+let blinkInterval = null;
+let blinkState = false;
+
+function startBlinkingTitle() {
+    blinkInterval = setInterval(() => {
+        document.title = blinkState ? acfBlinkMessage : originalTitle;
+        blinkState = !blinkState;
+    }, 1000);
+}
+
+
+function stopBlinkingTitle() {
+    clearInterval(blinkInterval);
+    document.title = originalTitle;
+    blinkState = false;
+}
+
+document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+        startBlinkingTitle();
+    } else {
+        stopBlinkingTitle();
+    }
+});
+

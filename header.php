@@ -3,7 +3,13 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>💰</text></svg>"></link>
+    <?php 
+    $enable_emoji_favicon = get_field('enable_emoji_favicon', 'option');
+    $emoji_favicon = get_field('emoji_favicon', 'option');
+    if ( $enable_emoji_favicon == 1) {
+    ?> 
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22><?php echo $emoji_favicon; ?></text></svg>"></link>
+    <?php } ?>
     <title><?php wp_title( '|', true, 'right' ); ?></title>
     <?php wp_head(); ?>
 
