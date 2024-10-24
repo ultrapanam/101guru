@@ -8,6 +8,8 @@ $modules = get_field('module_content', $page_id);
 $review_bonus_text = get_field('review_bonus_text'); // Example ACF field: review summary
 $review_affilate_link = get_field('review_affilate_link');
 $review_table = get_field('review_table') != null ? get_field('review_table') : false;
+$review_table_bottom = get_field('review_table_bottom') != null ? get_field('review_table_bottom') : false;
+$add_fancy_table = get_field('add_fancy_table') != null ? get_field('add_fancy_table') : false;
 $rating = get_field('review_rating') != null ? get_field('review_rating') : false;
 
 ?>
@@ -37,7 +39,10 @@ $rating = get_field('review_rating') != null ? get_field('review_rating') : fals
                             </div>
                             <div class="summary-wrapper">
                                 <div class="summary">
-                                    <?php if ( $review_table ) { ?>
+                                    <?php if ( $review_table && $add_fancy_table ) { 
+                                        // Count the number of items
+                                        $item_count = count($review_table); 
+                                        ?>
                                         <ul class="review-list">
                                             <?php foreach ( $review_table as $item ) { ?>
                                                 <li class="summary-list-heading grey-bg">
@@ -45,12 +50,20 @@ $rating = get_field('review_rating') != null ? get_field('review_rating') : fals
                                                     <p class="summary-list-body"><?php echo $item['value']; ?></p>
                                                 </li>
                                             <?php } ?>
+                                            
                                             <?php if( $review_bonus_text ): ?>
-                                                <li class="summary-list-heading blue-bg" style="padding: 0 !important; padding-left: 25px !important;">
+                                                <li class="summary-list-heading blue-bg last-child" style="padding: 0 !important; padding-left: 25px !important;"
+                                                    data-count="<?php echo $item_count; ?>">
                                                     <p><?php echo esc_html( $review_bonus_text ); ?></p>
                                                 </li>
                                             <?php endif; ?>
                                         </ul>
+                                    <?php }  else { ?>
+                                        <?php if( $review_bonus_text ): ?>
+                                            <div class="summary-bonus-text blue-bg" style="padding: 0 !important; padding-left: 25px !important;">
+                                                <p><?php echo esc_html( $review_bonus_text ); ?></p>
+                                        </div>
+                                        <?php endif; ?>
                                     <?php } ?>
                                 </div>
                             </div>
@@ -62,10 +75,10 @@ $rating = get_field('review_rating') != null ? get_field('review_rating') : fals
                         </div>
                     
                     <div class="review-table-wrapper">
-                        <?php if ( $review_table ) { ?>
+                        <?php if ( $review_table_bottom ) { ?>
                             <table class="review-table">
                                 <tbody>
-                                    <?php foreach ( $review_table as $item ) { ?>
+                                    <?php foreach ( $review_table_bottom as $item ) { ?>
                                         <tr>
                                             <td><?php echo $item['name']; ?></td>
                                             <td><?php echo $item['value']; ?></td>

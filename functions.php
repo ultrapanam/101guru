@@ -34,6 +34,9 @@ function enqueue_theme_scripts() {
   
   // Enqueue the accordion script
   wp_enqueue_script( 'theme-accordion-js', get_template_directory_uri() . '/assets/js/module_accordion.js', array(), '1.0', true );
+
+  // Enqueue the single review script
+  wp_enqueue_script( 'single-review-js', get_template_directory_uri() . '/assets/js/single_review.js', array(), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_theme_scripts' );
 
