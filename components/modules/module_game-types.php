@@ -28,7 +28,7 @@
                             the_row();                        
                             $payment_method_name = get_sub_field('name'); // The name in the repeater
                             $payment_method_image = get_sub_field('image'); // The image in the repeater
-                            $payment_method_casinos = get_sub_field('pyament_method_casinos'); // The image in the repeater
+                            $payment_method_casinos = get_sub_field('game_type_casinos'); // The image in the repeater
             
                             // Check if the current repeater row matches the selected payment method name
                             if ($payment_method_name == $selected_method) {
