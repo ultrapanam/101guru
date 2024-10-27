@@ -199,3 +199,10 @@ function custom_title_for_casinos_tag_page($title) {
     }
     return $title; // Return the original title for other pages
 }
+
+function search_only_reviews($query) {
+    if ($query->is_search() && !is_admin() && $query->is_main_query()) {
+        $query->set('post_type', 'review'); // Replace 'review' with your actual post type slug
+    }
+}
+add_action('pre_get_posts', 'search_only_reviews');
