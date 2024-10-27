@@ -146,8 +146,8 @@ add_filter('posts_groupby', 'custom_search_groupby');
 // Custom rewrite rule for Reviews by Tag
 function custom_reviews_by_tag_rewrite() {
     add_rewrite_rule(
-        '^reviews-by-tag/([^/]*)/?',
-        'index.php?pagename=reviews-by-tag&tag=$matches[1]',
+        '^casinos/([^/]*)/?',
+        'index.php?pagename=casinos&tag=$matches[1]',
         'top'
     );
 }
@@ -189,3 +189,13 @@ function enqueue_blinking_title_script() {
 }
 add_action('wp_footer', 'enqueue_blinking_title_script');
 
+add_filter('wpseo_title', 'custom_title_for_casinos_tag_page', 10, 1);
+
+function custom_title_for_casinos_tag_page($title) {
+    if (is_page_template('reviews-by-tag.php')) {
+        $current_tags_string = get_query_var('tag');
+        $current_tags = explode(',', $current_tags_string);
+        return 'Casinos with - ' . implode(', ', array_map('ucfirst', $current_tags));
+    }
+    return $title; // Return the original title for other pages
+}

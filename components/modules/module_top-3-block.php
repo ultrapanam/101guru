@@ -78,13 +78,15 @@ if (isset($module)) {
                             </div>
                         </div>
                     </div>
-                    <div class="payment-methods">
-                        <?php foreach ( $payment_methods_1 as $payment_logo) { ?>
-                            <div class="single-method">
-                                <img src="<?php echo  $payment_logo['image']; ?>" alt="">
-                            </div>
-                        <?php } ?>
-                    </div>
+                    <?php if ($payment_methods_1) { ?>
+                        <div class="payment-methods">
+                            <?php foreach ( $payment_methods_1 as $payment_logo) { ?>
+                                <div class="single-method">
+                                    <img src="<?php echo  $payment_logo['image']; ?>" alt="">
+                                </div>
+                            <?php } ?>
+                        </div>
+                    <?php } ?>
                     <div class="buttons-container">
                         <?php echo generate_acf_link($buttons_top_1['visit_casino'], 'btn blue-btn btn-left'); ?>
                         <?php echo generate_acf_link($buttons_top_1['read_review'], 'btn trans-btn'); ?>
@@ -119,6 +121,7 @@ if (isset($module)) {
                             </div>
                         </div>
                     </div>
+                    <?php if ($payment_methods_2) { ?>
                     <div class="payment-methods">
                         <?php foreach ( $payment_methods_2 as $payment_logo) { ?>
                             <div class="single-method">
@@ -126,6 +129,7 @@ if (isset($module)) {
                             </div>
                         <?php } ?>
                     </div>
+                    <?php } ?>
                     <div class="buttons-container">
                         <?php echo generate_acf_link($buttons_top_2['visit_casino'], 'btn blue-btn btn-left'); ?>
                         <?php echo generate_acf_link($buttons_top_2['read_review'], 'btn trans-btn'); ?>
@@ -160,6 +164,7 @@ if (isset($module)) {
                             </div>
                         </div>
                     </div>
+                    <?php if ($payment_methods_3) { ?>
                     <div class="payment-methods">
                         <?php foreach ( $payment_methods_3 as $payment_logo) { ?>
                             <div class="single-method">
@@ -167,6 +172,7 @@ if (isset($module)) {
                             </div>
                         <?php } ?>
                     </div>
+                    <?php } ?>
                     <div class="buttons-container">
                         <?php echo generate_acf_link($buttons_top_3['visit_casino'], 'btn blue-btn btn-left'); ?>
                         <?php echo generate_acf_link($buttons_top_3['read_review'], 'btn trans-btn'); ?>

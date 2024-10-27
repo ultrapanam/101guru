@@ -3,7 +3,9 @@
  * Template Name: Reviews by Tag
  */
 
-get_header(); ?>
+get_header(); 
+
+?>
 
 <div id="main">
     <div class="section reviews-by-tag">
