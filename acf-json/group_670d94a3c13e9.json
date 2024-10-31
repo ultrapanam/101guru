@@ -69,7 +69,7 @@
         {
             "key": "field_67115757bb533",
             "label": "Order by",
-            "name": "order_by",
+            "name": "order",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -120,5 +120,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1729189745
+    "modified": 1730070273
 }

@@ -15,11 +15,11 @@ if (isset($module)) {
     <div class="custom-accordion">
         <?php foreach ($accordion as $accordion_item ) { ?>
             <div class="accordion-item <?php if ($open_first == 1 && $x == 0) { echo 'active'; } ?>" <?php if ($background_type == 0) { ?> style="background:#353535!important;"<?php } ?>  >
-                <h2 class="accordion-header" <?php if ($background_type == 0) { ?> style="background:#353535!important;"<?php } ?>>
+                <h3 class="accordion-header" <?php if ($background_type == 0) { ?> style="background:#353535!important;"<?php } ?>>
                     <button class="accordion-button" type="button" <?php if ($background_type == 0) { ?> style="background:#353535!important;-webkit-text-fill-color: #fff;"<?php } ?>>
                         <?php echo $accordion_item['title']?>
                     </button>
-                </h2>
+                </h3>
                 <div class="accordion-content-faq">
                     <div class="accordion-body-faq">
                         <?php echo $accordion_item['body']?>

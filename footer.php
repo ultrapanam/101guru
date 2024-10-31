@@ -9,12 +9,21 @@ $footer_images = get_field('footer_images', 'options') != null ? get_field('foot
         <div class="footer-container">
             <div class="footer-images">
                 <?php foreach ($footer_images as $image ) { ?>
-                    <?php foreach ($image as $single_image ) { ?>
+                <?php 
+                    $image_link = $image['link'] != null ? $image['link']  : false;    
+                ?>            
+                    <?php if ($image_link != false) { ?>
+                        <a href="<?php echo $image_link['url']; ?>">
+                            <div class="single-image">
+                                <?php echo generate_acf_image($image['image'] , true); ?>                        
+                            </div>
+                        </a>
+                    <?php } else { ?>
                         <div class="single-image">
-                            <?php echo generate_acf_image($single_image , true); ?>                        
+                            <?php echo generate_acf_image($image['image'] , true); ?>                        
                         </div>
                     <?php } ?>
-                <?php } ?>
+                <?php } ?>         
             </div>
             <div class="footer-widgets">
                 <?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
