@@ -23,6 +23,8 @@
  */
  
 if (isset($module)) {
+    $heading = (isset($module['heading'])) ? $module['heading'] : false;
+
     $casino_logo_top_1 = (isset($module['casino_logo_top_1'])) ? $module['casino_logo_top_1'] : false;
     $casino_name_top_1 = (isset($module['casino_name_top_1'])) ? $module['casino_name_top_1'] : false;
     $bonus_text_top_1 = (isset($module['bonus_text_top_1'])) ? $module['bonus_text_top_1'] : false;
@@ -49,6 +51,11 @@ if (isset($module)) {
 ?>
 <div class="section top-3-block">    
     <div class="block-container">
+        <?php if ( $heading ) { ?>
+            <h2 class="top-3-heading">
+                <?php echo $heading; ?>
+            </h2>
+        <?php } ?>
         <div class="rank-cards-wrapper">
             <div class="single-card rank-1-item blue-border">
                 <h2 style="display: none!important;"><?php echo $casino_name_top_1; ?></h2>

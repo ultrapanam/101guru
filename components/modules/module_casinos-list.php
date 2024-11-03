@@ -6,6 +6,7 @@
 
 if (isset($module)) {
 
+$heading = (isset($module['heading'])) ? $module['heading'] : false;
 $posts_per_page = (isset($module['posts_per_page'])) ? $module['posts_per_page'] : false;
 $order_by = (isset($module['order_by'])) ? $module['order_by'] : false;
 $order = (isset($module['order'])) ? $module['order'] : false;
@@ -13,6 +14,11 @@ $order = (isset($module['order'])) ? $module['order'] : false;
 ?>
 
 <div id="casinos-list" class="section casinos-list">
+    <?php if ( $heading ) { ?>
+        <h2 class="casinos-list-heading">
+            <?php echo $heading; ?>
+        </h2>
+    <?php } ?>
     <div class="block-container">
         <?php
         // Custom query to fetch all posts from the custom post type 'review'
@@ -80,9 +86,9 @@ $order = (isset($module['order'])) ? $module['order'] : false;
                                     </div>
                                 <?php endif; ?>
                                 <div class="title-wrapper">
-                                    <h2 class="review-title">
+                                    <div class="review-title">
                                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                                    </h2>
+                                    </div>
 
                                     <?php if( $rating ): ?>
                                             <?php 

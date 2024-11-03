@@ -3,6 +3,26 @@
     "title": "[MODULE] Casinos list Auto",
     "fields": [
         {
+            "key": "field_6727bcafd06dd",
+            "label": "Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_670d94a460d71",
             "label": "Posts per page",
             "name": "posts_per_page",
@@ -120,5 +140,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1730070273
+    "modified": 1730657647
 }

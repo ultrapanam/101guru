@@ -3,6 +3,26 @@
     "title": "[MODULE] Accordion",
     "fields": [
         {
+            "key": "field_6727c317dfce1",
+            "label": "Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_67183f6cb6cbf",
             "label": "Open first tab by default",
             "name": "open_first_tab_by_default",
@@ -136,5 +156,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1729643045
+    "modified": 1730659106
 }
