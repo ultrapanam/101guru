@@ -58,7 +58,7 @@ if (isset($module)) {
         <?php } ?>
         <div class="rank-cards-wrapper">
             <div class="single-card rank-1-item blue-border">
-                <h2 style="display: none!important;"><?php echo $casino_name_top_1; ?></h2>
+                <div style="display: none!important;"><?php echo $casino_name_top_1; ?></div>
                 <div class="casino-logo">
                     <?php echo generate_acf_image($casino_logo_top_1, true); ?>
                 </div>
@@ -66,9 +66,9 @@ if (isset($module)) {
                     <div class="bonus-block">
                         <div class="bonus-heading">
                             <span class="bonus-sign">BONUS</span>
-                            <h3>
+                            <div>
                                 <?php echo $bonus_text_top_1; ?>
-                            </h3>
+                            </div>
                         </div>
                         <div class="bonus-text">
                         <div class="min-deposit">
@@ -101,7 +101,7 @@ if (isset($module)) {
                 </div>
             </div>
             <div class="single-card rank-2-item blue-border">
-                <h2 style="display: none!important;"><?php echo $casino_name_top_2; ?></h2>
+                <div style="display: none!important;"><?php echo $casino_name_top_2; ?></div>
                 <div class="casino-logo">
                     <?php echo generate_acf_image($casino_logo_top_2, true); ?>
                 </div>
@@ -109,9 +109,9 @@ if (isset($module)) {
                     <div class="bonus-block">
                         <div class="bonus-heading">
                             <span class="bonus-sign">BONUS</span>
-                            <h3>
+                            <div>
                                 <?php echo $bonus_text_top_2; ?>
-                            </h3>
+                            </div>
                         </div>
                         <div class="bonus-text">
                         <div class="min-deposit">
@@ -144,7 +144,7 @@ if (isset($module)) {
                 </div>
             </div>
             <div class="single-card rank-3-item blue-border">
-                <h2 style="display: none!important;"><?php echo $casino_name_top_3; ?></h2>
+                <div style="display: none!important;"><?php echo $casino_name_top_3; ?></div>
                 <div class="casino-logo">
                     <?php echo generate_acf_image($casino_logo_top_3, true); ?>
                 </div>
@@ -152,9 +152,9 @@ if (isset($module)) {
                     <div class="bonus-block">
                         <div class="bonus-heading">
                             <span class="bonus-sign">BONUS</span>
-                            <h3>
+                            <div>
                                 <?php echo $bonus_text_top_3; ?>
-                            </h3>
+                            </div>
                         </div>
                         <div class="bonus-text">
                             <div class="min-deposit">

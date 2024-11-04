@@ -38,13 +38,13 @@
                                     <a href="<?php echo $payment_method_casinos; ?>">
                                         <div class="game-type blue-border">
                                             <img src="<?php echo esc_url($payment_method_image['url']) ?>" alt="<?php echo esc_attr($payment_method_name) ?>">
-                                            <p> <?php echo esc_html($payment_method_name) ?> </p>
+                                            <h3> <?php echo esc_html($payment_method_name) ?> </h3>
                                         </div>
                                     </a>
                                 <?php } else { ?>
                                     <div class="game-type blue-border">
                                         <img src="<?php echo esc_url($payment_method_image['url']) ?>" alt="<?php echo esc_attr($payment_method_name) ?>">
-                                        <p> <?php echo esc_html($payment_method_name) ?> </p>
+                                        <h3> <?php echo esc_html($payment_method_name) ?> </h3>
                                     </div>
                                <?php } 
                             }
